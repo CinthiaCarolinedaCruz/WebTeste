@@ -18,7 +18,7 @@ jobs:
     - name: Set up .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '3.1.102'
+        dotnet-version: '2.1.804'
 
     - name: Build with dotnet
       run: dotnet build --configuration Release
@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'webcinthia'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_ae29b9cb98be4b4f8b9d252d1d197245 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_cb9360645ecf41b78ec665526ca5f892 }}
         package: ${{env.DOTNET_ROOT}}/myapp 
